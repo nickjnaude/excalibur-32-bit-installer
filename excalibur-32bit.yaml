@@ -1,0 +1,33 @@
+# Required package metadata
+Id: kflnet.excalibur32bit
+Name: Excalibur 32-bit
+Publisher: Nick Naude
+Version: 2.00
+License: Freeware
+LicenseNotes: >
+  Excalibur for Windows is freeware. May be freely copied and distributed
+  as long as the entire program is copied unmodified and no fee is charged.
+  Redistribution on shareware/freeware CD collections requires permission
+  from the author. Provided "as-is" with no warranties.
+ShortDescription: Excalibur is a full featured RPN calculator for Windows 32-bit operating systems.
+
+# Installer section
+InstallerType: powershell
+Installers:
+  - Architecture: x86
+    InstallerUrl:
+    InstallerSha256: C756565AE4136535D27607810F7576A56672D38B856723004BCC4E706081B505
+    Scope: machine
+    InstallerSwitches:
+      Silent: "-Action install -Quiet"
+      SilentWithProgress: "-Action install"
+    PerMachine: true
+
+  - Architecture: x64
+    InstallerUrl:
+    InstallerSha256: C756565AE4136535D27607810F7576A56672D38B856723004BCC4E706081B505
+    Scope: machine
+    InstallerSwitches:
+      Silent: "-Action install -Quiet"
+      SilentWithProgress: "-Action install"
+    PerMachine: true
