@@ -1,0 +1,27 @@
+---
+PackageIdentifier: kflnet.excalibur32bit
+PackageVersion: 2.00
+Platform:
+  - "Windows.Desktop"
+InstallerType: exe
+ManifestType: installer
+ManifestVersion: 1.0.0
+
+Installers:
+  - Architecture: x86
+    InstallerType: exe
+    InstallerUrl: "https://raw.githubusercontent.com/nickjnaude/excalibur-32-bit-installer/refs/heads/master/installer.exe"
+    InstallerSha256: 8F236D483CE0786E1901C68EB3043E9198E29E91F41A59D1F9B63E3AEA319ABF
+    Scope: machine
+    InstallerSwitches:
+      Silent: "-Action install -Quiet"
+      SilentWithProgress: "-Action install"
+
+  - Architecture: x64
+    InstallerType: exe
+    InstallerUrl: "https://raw.githubusercontent.com/nickjnaude/excalibur-32-bit-installer/refs/heads/master/installer.exe"
+    InstallerSha256: 8F236D483CE0786E1901C68EB3043E9198E29E91F41A59D1F9B63E3AEA319ABF
+    Scope: machine
+    InstallerSwitches:
+      Silent: "-Action install -Quiet"
+      SilentWithProgress: "-Action install"

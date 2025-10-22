@@ -1,0 +1,14 @@
+---
+PackageIdentifier: kflnet.excalibur32bit
+PackageVersion: 2.00
+PackageLocale: en-US
+PackageName: Excalibur 32-bit
+Publisher: Nick Naude
+License: Freeware
+ShortDescription: Excalibur is a full featured RPN calculator for Windows 32-bit operating systems.
+ManifestType: defaultLocale
+ManifestVersion: 1.0.0
+Tags:
+  - "Calculator"
+  - "RPN"
+  - "Utilities"
