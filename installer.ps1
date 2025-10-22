@@ -66,6 +66,14 @@ function Install-App {
     $StartMenuShortcut = $WScriptShell.createShortcut($StartMenuHelpShortcutPath)
     $StartMenuShortcut.TargetPath = "$AppDir\$AppHelpFile"
     $StartMenuShortcut.Save()
+
+    Copy-Item -Path "$PSCommandPath" -Destination "$AppDir"
+
+    $UninstallCmd = "powershell.exe -ExecutionPolicy Bypass -File `"$AppDir\installer.ps1 -Action uninstall`""
+
+    New-Item -Path "HKLM:\Software\Microsoft\Windows\CurrentVersion\Uninstall\$AppName" -Force | Out-Null
+    Set-ItemProperty -Path "HKLM:\Software\Microsoft\Windows\CurrentVersion\Uninstall\$AppName" ` -Name "DisplayName" -Value "$AppName"
+    Set-ItemProperty -Path "HKLM:\Software\Microsoft\Windows\CurrentVersion\Uninstall\$AppName" ` -Name "UninstallString" -Value $UninstallCmd
     
     if (-not $Quiet) { Write-Host "Done. $AppName installed to $AppDir" }
 }
@@ -78,6 +86,10 @@ function Uninstall-App {
     
     Remove-Item -Force $DesktopShortcutPath, $StartMenuShortcutPath, $StartMenuHelpShortcutPath -ErrorAction SilentlyContinue
     Remove-Item -Recurse -Force "$StartMenuDir" -ErrorAction SilentlyContinue
+
+    Remove-Item -Path "HKLM:\Software\Microsoft\Windows\CurrentVersion\Uninstall\$AppName" -Recurse -Force -ErrorAction SilentlyContinue
+    Remove-Item -Force "$AppDir/installer.ps1" -ErrorAction SilentlyContinue
+
     if (-not $Quiet) { Write-Host "$AppName uninstalled successfully" }
 }
 

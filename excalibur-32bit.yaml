@@ -16,7 +16,7 @@ InstallerType: powershell
 Installers:
   - Architecture: x86
     InstallerUrl:
-    InstallerSha256: C756565AE4136535D27607810F7576A56672D38B856723004BCC4E706081B505
+    InstallerSha256: E4C19BD4964102A5A830087BC452AF03B37AE84600DA95460706F4B3FDE58071
     Scope: machine
     InstallerSwitches:
       Silent: "-Action install -Quiet"
@@ -25,7 +25,7 @@ Installers:
 
   - Architecture: x64
     InstallerUrl:
-    InstallerSha256: C756565AE4136535D27607810F7576A56672D38B856723004BCC4E706081B505
+    InstallerSha256: E4C19BD4964102A5A830087BC452AF03B37AE84600DA95460706F4B3FDE58071
     Scope: machine
     InstallerSwitches:
       Silent: "-Action install -Quiet"
