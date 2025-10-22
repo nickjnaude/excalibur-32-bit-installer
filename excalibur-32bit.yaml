@@ -15,7 +15,7 @@ ShortDescription: Excalibur is a full featured RPN calculator for Windows 32-bit
 InstallerType: powershell
 Installers:
   - Architecture: x86
-    InstallerUrl:
+    InstallerUrl: "https://raw.githubusercontent.com/nickjnaude/excalibur-32-bit-installer/refs/heads/master/installer.ps1"
     InstallerSha256: E4C19BD4964102A5A830087BC452AF03B37AE84600DA95460706F4B3FDE58071
     Scope: machine
     InstallerSwitches:
@@ -24,7 +24,7 @@ Installers:
     PerMachine: true
 
   - Architecture: x64
-    InstallerUrl:
+    InstallerUrl: "https://raw.githubusercontent.com/nickjnaude/excalibur-32-bit-installer/refs/heads/master/installer.ps1"
     InstallerSha256: E4C19BD4964102A5A830087BC452AF03B37AE84600DA95460706F4B3FDE58071
     Scope: machine
     InstallerSwitches:
